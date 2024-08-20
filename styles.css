@@ -8,16 +8,39 @@
 body, html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
     overflow: hidden;
+}
+
+/* Fullscreen Slideshow Background */
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide:nth-child(1) {
+    opacity: 1; /* Show the first slide initially */
 }
 
 /* Navbar styles */
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: rgba(18, 18, 18, 0.95); /* Slight transparency */
+    background-color: rgba(18, 18, 18, 0.85); /* Slight transparency */
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -62,54 +85,7 @@ body, html {
     margin: 0;
 }
 
-/* Slideshow container styles */
-.slideshow-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.slide {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    animation: fade 5s infinite;
-}
-
-.fade {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-}
-
-@keyframes fade {
-    0% { opacity: 0; }
-    25% { opacity: 1; }
-    75% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-/* General page styling for a professional look */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #e0e0e0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-p {
-    color: #bdbdbd;
-    font-size: 16px;
-}
-
-/* Navbar responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -120,26 +96,8 @@ p {
         padding: 10px;
         font-size: 16px;
     }
-}
 
-/* Additional styling for links */
-a {
-    color: #00BCD4;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0288D1;
-}
-
-/* Footer styles (if needed in future pages) */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    background-color: rgba(18, 18, 18, 0.9);
-    color: #ffffff;
-    font-size: 14px;
+    .main-title {
+        font-size: 48px;
+    }
 }
