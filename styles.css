@@ -17,7 +17,7 @@ body, html {
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: rgba(18, 18, 18, 0.9); /* Slight transparency */
+    background-color: rgba(18, 18, 18, 0.95); /* Slight transparency */
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -45,7 +45,7 @@ body, html {
 /* Title Container */
 .title-container {
     position: absolute;
-    top: 80px; /* Adjusts the distance from the navbar */
+    top: 100px; /* Adjusts the distance from the navbar */
     width: 100%;
     text-align: center;
     z-index: 5;
@@ -54,7 +54,7 @@ body, html {
 .main-title {
     font-size: 72px;
     font-weight: bold;
-    background: linear-gradient(45deg, #8e44ad, #3498db);
+    background: linear-gradient(45deg, #8e44ad, #3498db); /* Fading purple gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #fff;
