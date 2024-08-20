@@ -103,8 +103,8 @@ body, html {
 }
 
 /* Perks Styling */
-.subscription-card p {
-    color: #bdbdbd;
+.subscription-card p, .subscription-card ul, .subscription-card li {
+    color: #ffffff; /* Change text color to white for better contrast */
     font-size: 16px;
     margin: 15px 0 20px; /* Adjust spacing for a more professional look */
     line-height: 1.6;
@@ -117,6 +117,7 @@ body, html {
     margin: 10px 0;
 }
 
+/* Subscribe Button Styling */
 .subscribe-button {
     display: inline-block;
     background-color: #4a4a4a; /* Dark gray for the button */
@@ -128,10 +129,23 @@ body, html {
     font-weight: 500;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    margin-top: auto; /* Ensures the button is pushed to the bottom */
+    animation: rainbowText 3s infinite linear; /* Fading rainbow effect for text */
 }
 
 .subscribe-button:hover {
     background-color: #333333; /* Darker gray on hover */
+}
+
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
 }
 
 /* Responsive Design for Subscription Cards */
