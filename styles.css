@@ -13,6 +13,55 @@ body, html {
     overflow: hidden;
 }
 
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 0.9); /* Slight transparency */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #333333;
+}
+
+.navbar a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #333333;
+    color: #00BCD4; /* Accent color for hover */
+    border-radius: 5px;
+}
+
+/* Title Container */
+.title-container {
+    position: absolute;
+    top: 80px; /* Adjusts the distance from the navbar */
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
 /* Slideshow container styles */
 .slideshow-container {
     position: absolute;
@@ -41,35 +90,6 @@ body, html {
     25% { opacity: 1; }
     75% { opacity: 1; }
     100% { opacity: 0; }
-}
-
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(18, 18, 18, 0.9); /* Slight transparency */
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    border-bottom: 1px solid #333333;
-}
-
-.navbar a {
-    color: #ffffff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #333333;
-    color: #00BCD4; /* Accent color for hover */
-    border-radius: 5px;
 }
 
 /* General page styling for a professional look */
