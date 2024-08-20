@@ -1,3 +1,4 @@
+/* Body and HTML Reset */
 body, html {
     height: 100%;
     margin: 0;
@@ -27,26 +28,6 @@ body, html {
 
 .slide:nth-child(1) {
     opacity: 1; /* Show the first slide initially */
-}
-
-/* Title Container */
-.title-container {
-    position: absolute;
-    top: 100px; /* Adjusts the distance from the navbar */
-    width: 100%;
-    text-align: center;
-    z-index: 5;
-}
-
-.main-title {
-    font-size: 72px;
-    font-weight: bold;
-    background: linear-gradient(45deg, #8e44ad, #3498db); /* Fading purple gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
 }
 
 /* Navbar styles */
@@ -85,6 +66,7 @@ body, html {
     justify-content: center;
     margin: 50px 0;
     padding: 0 10px;
+    gap: 20px; /* Add spacing between the cards */
 }
 
 .subscription-card {
@@ -92,8 +74,7 @@ body, html {
     border: 1px solid #333;
     border-radius: 8px;
     width: 300px;
-    height: 400px; /* Fixed height for uniformity */
-    margin: 15px;
+    height: 420px; /* Fixed height for uniformity */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -133,10 +114,22 @@ body, html {
     font-weight: 500;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    animation: rainbowText 3s infinite linear; /* Fading rainbow effect */
 }
 
 .subscribe-button:hover {
     background-color: #0288D1;
+}
+
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
 }
 
 /* Responsive Design for Subscription Cards */
