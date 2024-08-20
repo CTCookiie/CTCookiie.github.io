@@ -66,15 +66,14 @@ body, html {
     justify-content: center;
     margin: 50px 0;
     padding: 0 10px;
-    gap: 20px; /* Add spacing between the cards */
+    gap: 30px; /* Increased spacing between the cards */
 }
 
 .subscription-card {
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 8px;
-    width: 300px;
-    height: 420px; /* Fixed height for uniformity */
+    width: 320px; /* Consistent width */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -82,6 +81,7 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    min-height: 600px; /* Set a minimum height to accommodate all content */
 }
 
 .subscription-card h2 {
@@ -136,5 +136,6 @@ body, html {
 @media (max-width: 768px) {
     .subscription-card {
         width: 100%;
+        min-height: 600px; /* Ensure uniform height on mobile as well */
     }
 }
