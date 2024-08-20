@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaos Theory - Homepage</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="navbar">
-        <a href="store.html">Store</a>  <!-- Link to Store page -->
-        <a href="merch.html">Merch</a>  <!-- Link to Merch page -->
-        <a href="https://discord.com" target="_blank">Discord</a>  <!-- External Discord link -->
-        <a href="wiki.html">Wiki</a>  <!-- Link to Wiki page -->
+        <a href="store.html">Store</a>
+        <a href="merch.html">Merch</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
+        <a href="wiki.html">Wiki</a>
     </div>
 
     <div class="title-container">
@@ -20,27 +20,11 @@
     </div>
 
     <div class="slideshow-container">
-        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525519764619315/ss_76b264a002307f4b5b78b97078bb065eca7d209a.png?ex=66c63536&is=66c4e3b6&hm=d45ed082ac1abaa7ded2dbd30a54e9b71511946b544f08e31e01e6a08b9f51e8&');"></div>
-        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525520318005381/O9EiwLkvsDZBj0ZX0GdPeja4hd22-qvb33k7.png?ex=66c63536&is=66c4e3b6&hm=589eef98bd7e14ff228d58fd1f9ec7f2c5ea9ccfe707dc3102d45b662d116128&');"></div>
-        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525520813195264/latest.png?ex=66c63536&is=66c4e3b6&hm=ed8edeb10e710e1862985e76c294ac192e048ea396af8e34f6ee9676a69b1538&');"></div>
-        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525521215852564/ss_7b5d84bcf29507822c578c1623b7182e5a3517db.png?ex=66c63536&is=66c4e3b6&hm=cef76bcabd3ddcfb77971939f938729f6d356e199dd0af435c66186d516c6c2e&');"></div>
+        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525519764619315/ss_76b264a002307f4b5b78b97078bb065eca7d209a.png'); display: block;"></div>
+        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525520318005381/O9EiwLkvsDZBj0ZX0GdPeja4hd22-qvb33k7.png'); display: block;"></div>
+        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525520813195264/latest.png'); display: block;"></div>
+        <div class="slide fade" style="background-image: url('https://cdn.discordapp.com/attachments/1064690134991261768/1275525521215852564/ss_7b5d84bcf29507822c578c1623b7182e5a3517db.png'); display: block;"></div>
     </div>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
-    </script>
 
 </body>
 </html>
