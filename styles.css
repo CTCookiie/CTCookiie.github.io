@@ -29,6 +29,26 @@ body, html {
     opacity: 1; /* Show the first slide initially */
 }
 
+/* Title Container */
+.title-container {
+    position: absolute;
+    top: 100px; /* Adjusts the distance from the navbar */
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #8e44ad, #3498db); /* Fading purple gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
 /* Navbar styles */
 .navbar {
     display: flex;
