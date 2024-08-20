@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaos Theory - Homepage</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
 
     <div class="navbar">
-        <a href="store.html">Store</a>
-        <a href="merch.html">Merch</a>
-        <a href="https://discord.com" target="_blank">Discord</a>
-        <a href="wiki.html">Wiki</a>
+        <a href="store.html">Store</a>  <!-- Link to Store page -->
+        <a href="merch.html">Merch</a>  <!-- Link to Merch page -->
+        <a href="https://discord.com" target="_blank">Discord</a>  <!-- External Discord link -->
+        <a href="wiki.html">Wiki</a>  <!-- Link to Wiki page -->
     </div>
 
     <div class="title-container">
         <h1 class="main-title">Chaos Theory</h1>
     </div>
 
-    <div>
-        <img src="https://cdn.discordapp.com/attachments/1064690134991261768/1275525519764619315/ss_76b264a002307f4b5b78b97078bb065eca7d209a.png" alt="Test Image" style="width: 100%; height: auto;">
+    <div class="slideshow-container">
+        <div class="slide fade" style="background-image: url('https://i.imgur.com/Wv45Tfg.jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://i.imgur.com/nkpyGIz.jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://i.imgur.com/AAdJTj5.jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://i.imgur.com/2vWMfB3.jpg');"></div>
     </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
 
 </body>
 </html>
