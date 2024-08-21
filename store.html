@@ -17,6 +17,14 @@
         <a href="wiki.html">Wiki</a>
     </div>
 
+    <!-- Slideshow Container (for background) -->
+    <div class="slideshow-container">
+        <div class="slide" style="background-image: url('https://i.imgur.com/Wv45Tfg.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.imgur.com/nkpyGIz.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.imgur.com/AAdJTj5.jpg');"></div>
+        <div class="slide" style="background-image: url('https://i.imgur.com/2vWMfB3.jpg');"></div>
+    </div>
+
     <!-- Subscription Container -->
     <div id="top" class="subscription-container">
         <div class="subscription-card">
@@ -57,7 +65,7 @@
         </div>
 
         <div class="subscription-card">
-            <h2>Mole Rat</h3>
+            <h2>Mole Rat</h2>
             <h3>$5.00 USD</h3>
             <div class="monthly">Monthly</div>
             <p><strong>SCP:</strong></p>
@@ -230,29 +238,45 @@
 
     <!-- Bottom Section -->
     <div id="bottom" class="subscription-container">
-        <!-- Add any additional content or leave it for the bottom of the page -->
+        <!-- Additional subscription cards or other content could be added here if needed -->
     </div>
 
-    <!-- JavaScript for Smooth Scrolling and Scroll Arrow Visibility -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <!-- JavaScript for Smooth Scrolling and Slideshow -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
 
-    window.addEventListener('scroll', function() {
-        const scrollArrow = document.querySelector('.scroll-arrow');
-        if (window.scrollY > 100) { // Hide the arrow after scrolling down 100px
-            scrollArrow.classList.add('hidden');
-        } else {
-            scrollArrow.classList.remove('hidden');
+        window.addEventListener('scroll', function() {
+            const scrollArrow = document.querySelector('.scroll-arrow');
+            if (window.scrollY > 100) { // Hide the arrow after scrolling down 100px
+                scrollArrow.classList.add('hidden');
+            } else {
+                scrollArrow.classList.remove('hidden');
+            }
+        });
+
+        // Slideshow functionality
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide) => {
+                slide.style.opacity = '0';
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.opacity = '1';
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
-    });
-</script>
+
+        showSlides();
+    </script>
 
 </body>
 </html>
