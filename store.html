@@ -233,17 +233,26 @@
         <!-- Add any additional content or leave it for the bottom of the page -->
     </div>
 
-    <!-- JavaScript for Smooth Scrolling -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+    <!-- JavaScript for Smooth Scrolling and Scroll Arrow Visibility -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    </script>
+    });
+
+    window.addEventListener('scroll', function() {
+        const scrollArrow = document.querySelector('.scroll-arrow');
+        if (window.scrollY > 100) { // Hide the arrow after scrolling down 100px
+            scrollArrow.classList.add('hidden');
+        } else {
+            scrollArrow.classList.remove('hidden');
+        }
+    });
+</script>
 
 </body>
 </html>
