@@ -13,19 +13,12 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="merch.html">Merch</a>
-        <a href="https://discord.com/invite/chaosscp" target="_blank">Discord</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
         <a href="wiki.html">Wiki</a>
     </div>
 
-    <!-- Slideshow Container (for background) -->
-    <div class="slideshow-container">
-        <div class="slide" style="background-image: url('https://i.imgur.com/BJmg8xI.png');"></div>
-        <div class="slide" style="background-image: url('https://i.imgur.com/if9OuWQ.png');"></div>
-        <div class="slide" style="background-image: url('https://i.imgur.com/hMme2gN.png');"></div>
-    </div>
-
     <!-- Subscription Container -->
-    <div class="subscription-container">
+    <div id="top" class="subscription-container">
         <div class="subscription-card">
             <h2>Hammer Down</h2>
             <h3>$1.00 USD</h3>
@@ -44,7 +37,6 @@
             <a href="https://yoursite.memberful.com/checkout?plan=1" class="subscribe-button">Subscribe</a>
         </div>
 
-        <!-- Repeat for each subscription -->
         <div class="subscription-card">
             <h2>Euclid</h2>
             <h3>$3.00 USD</h3>
@@ -231,22 +223,26 @@
         </div>
     </div>
 
-    <!-- JavaScript for Slideshow -->
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-arrow">
+        <a href="#bottom"><img src="https://img.icons8.com/ios-filled/50/ffffff/down--v1.png" alt="Scroll Down"></a>
+    </div>
+
+    <!-- Bottom Section -->
+    <div id="bottom" class="subscription-container">
+        <!-- Add any additional content or leave it for the bottom of the page -->
+    </div>
+
+    <!-- JavaScript for Smooth Scrolling -->
     <script>
-        let slideIndex = 0;
-
-        function showSlides() {
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach((slide) => {
-                slide.style.opacity = '0';
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-            slideIndex++;
-            if (slideIndex > slides.length) slideIndex = 1;
-            slides[slideIndex - 1].style.opacity = '1';
-            setTimeout(showSlides, 8000); // Change image every 8 seconds
-        }
-
-        showSlides();
+        });
     </script>
 
 </body>
