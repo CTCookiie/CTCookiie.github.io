@@ -59,6 +59,26 @@ body, html {
     border-radius: 5px;
 }
 
+/* Title Container */
+.title-container {
+    position: absolute;
+    top: 60px; /* Adjusts the distance from the navbar */
+    width: 100%;
+    text-align: center;
+    z-index: 2; /* Ensure the title appears above the background images */
+}
+
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a82fb, #fc5c7d); /* Fading gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
 /* Subscription Card Styles */
 .subscription-container {
     display: flex;
