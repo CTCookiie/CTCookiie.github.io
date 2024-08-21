@@ -62,7 +62,7 @@ body, html {
 /* Title Container */
 .title-container {
     position: absolute;
-    top: 60px; /* Adjusts the distance from the navbar */
+    top: 100px; /* Adjust this value to lower or raise the text */
     width: 100%;
     text-align: center;
     z-index: 2; /* Ensure the title appears above the background images */
